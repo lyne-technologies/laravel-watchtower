@@ -5,8 +5,6 @@
 
 Looking for a free laravel error reporting package? Well you've arrived at the right place! Laravel Watchtower is simple yet affective package that notifies you when an error is hit on your site.
 
-**This package is currently in beta to allow for further testing**
-
 ## Installation
 
 You can install the package via composer:
