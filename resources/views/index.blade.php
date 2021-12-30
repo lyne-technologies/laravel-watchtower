@@ -13,10 +13,6 @@
             <p>Last 30 days</p>
             <p class="text-3xl">{{$last30Days}}</p>
         </div>
-        <div class="card bg-white">
-{{--            <p>Powered By</p>--}}
-{{--            <p class="text-3xl">Laravel Watchtower</p>--}}
-        </div>
     </div>
 
     <div class="bg-white rounded shadow">
@@ -28,7 +24,7 @@
                 <div class="grid grid-cols-4">
                     <div class="col-span-3">
                         <p class="text-lg">{{$error->message}}</p>
-                        <p class="text-gray">{{$error->file}}</p>
+                        <p class="text-gray break-word">{{$error->file}}</p>
                     </div>
                     <div>
                         <p>Happen:</p>
