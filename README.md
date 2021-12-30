@@ -17,6 +17,8 @@ composer require lynetechnologies/laravel-watchtower
 
 Next, in your ``app/Exceptions/Handle.php`` add the below in the register method.
 ```php
+use LyneTechnologies\LaravelWatchtower\LaravelWatchtower;
+
 public function register()
 {
     //...
@@ -25,6 +27,12 @@ public function register()
     });
     //...
 }
+```
+
+Once enabled one or more notification streams below, you can then use the ``watchtower:test`` command to test everything is running as expected.
+
+```shell
+php artisan watchtower:test
 ```
 
 ## Usage

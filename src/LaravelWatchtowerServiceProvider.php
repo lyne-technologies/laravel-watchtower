@@ -3,6 +3,7 @@
 namespace LyneTechnologies\LaravelWatchtower;
 
 use Illuminate\Support\ServiceProvider;
+use LyneTechnologies\LaravelWatchtower\Console\Test;
 
 class LaravelWatchtowerServiceProvider extends ServiceProvider
 {
@@ -23,9 +24,11 @@ class LaravelWatchtowerServiceProvider extends ServiceProvider
             if (! class_exists('CreateErrorsTable')) {
                 $this->publishes([
                     __DIR__ . '/../database/migrations/create_errors_table.php.stub' => database_path('migrations/' . date('Y_m_d_His', time()) . '_create_errors_table.php'),
-                    // you can add any number of migrations here
                 ], 'migrations');
             }
+            $this->commands([
+                Test::class,
+            ]);
         }
         $this->loadViewsFrom(__DIR__.'/../resources/views', 'laravel-watchtower');
         $this->loadRoutesFrom(__DIR__.'/../routes/web.php');

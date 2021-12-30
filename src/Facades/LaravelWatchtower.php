@@ -1,6 +1,6 @@
 <?php
 
-namespace lynetechnologies\LaravelWatchtower\Facades;
+namespace LyneTechnologies\LaravelWatchtower\Facades;
 
 use Illuminate\Support\Facades\Facade;
 
